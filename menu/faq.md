@@ -5,8 +5,9 @@ title: Frequently Asked Questions (FAQ)
 
 > How do I register to participate in the Visualize This! Challenge?
 
-Anyone interested in this competition must register their interest here. If you have any questions,
-please contact viz-challenge@westgrid.ca.
+Anyone interested in this competition must register their interest
+[here](https://www.eventbrite.ca/e/3rd-annual-visualize-this-challenge-registration-48899166724). If you
+have any questions, please contact viz-challenge@westgrid.ca.
 
 > Can we work in a team?
 
@@ -20,8 +21,9 @@ small as you like.
 
 > Do all team members need to register their interest?
 
-No. Only one member of the team needs to register your interest in the challenge. Click here to register
-your interest.
+No. Only one member of the team needs to register your interest in the challenge. Click
+[here](https://www.eventbrite.ca/e/3rd-annual-visualize-this-challenge-registration-48899166724) to
+register your interest.
 
 > What are the deadlines?
 
@@ -49,8 +51,9 @@ matter what your research area may be.
 
 Yes. Your visualization does not need to be developed or implemented on WestGrid or Compute Canada's
 platforms. However, if you would like to use WestGrid or Compute Canada computational resources for your
-visualization, you can register for an account here: https://ccdb.computecanada.ca/security/login. If you
-have any questions about getting an account, please email accounts@computecanada.ca.
+visualization, you can register for an account
+[here](https://www.computecanada.ca/research-portal/account-management/apply-for-an-account). If you have
+any questions about getting an account, please email accounts@computecanada.ca.
 
 > I am not affiliated with a Canadian university, post-secondary institution, or research
 > organization. Can I participate in the Challenge?
@@ -70,9 +73,11 @@ Canada.
 
 Participants can use any open-source visualization tool, including ParaView, VisIt, domain-specific
 packages, online Javascript/WebGL tools, Python visualization libraries, or any other open-source
-software you feel comfortable using. We hosted a kickoff webinar on Sept 27 that gave a walk-through of
-the dataset and gave some examples of visualization tools that can be used. Click here to view the
-archive recording (to get right to the dataset tour, skip ahead to 4:04 in the video).
+software you feel comfortable using.
+
+<!-- We hosted a kickoff webinar on Sept 27 that gave a walk-through of the dataset and gave some examples of -->
+<!-- visualization tools that can be used. Click here to view the archive recording (to get right to the -->
+<!-- dataset tour, skip ahead to 4:04 in the video). -->
 
 > Will any technical support be provided to participants?
 
@@ -98,9 +103,11 @@ and/or the benefits of visualization to research.
 
 No. All participants will work with the same dataset, which has been provided to the Challenge by a
 researcher. The dataset will be made available on the competition webpage and participants can download
-it anytime after October 01. We hosted a kickoff webinar on Sept 27 that gave a walk-through of the
-dataset. Click here to view the archive recording (to get right to the dataset tour, skip ahead to 4:04
-in the video).
+it anytime after October 01.
+
+<!-- We hosted a kickoff webinar on Sept 27 that gave a walk-through of the -->
+<!-- dataset. Click here to view the archive recording (to get right to the dataset tour, skip ahead to 4:04 -->
+<!-- in the video). -->
 
 > How do I submit my solution?
 

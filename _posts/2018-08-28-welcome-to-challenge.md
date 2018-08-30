@@ -18,7 +18,8 @@ This year’s Visualize This! Challenge is hosted by WestGrid, a regional partne
 Canada. Together with the Compute Canada Visualization Team, we want to bring your creative visualization
 ideas and workflows to life and make them accessible to all Canadian researchers!
 
-To participate in the Challenge, please register your interest here.
+To participate in the Challenge, please
+[register your interest](https://www.eventbrite.ca/e/3rd-annual-visualize-this-challenge-registration-48899166724).
 
 This year’s contributed dataset is a multi-scale aerodynamical model of several counter-rotating
 vertical-axis wind turbines. It will be available for download from October 1 to November
@@ -26,7 +27,8 @@ vertical-axis wind turbines. It will be available for download from October 1 to
 
 ## Prizes
 
-To be eligible for a prize, you must be registered as a participant. Register here!
+To be eligible for a prize, you must be registered as a participant. Register
+[here](https://www.eventbrite.ca/e/3rd-annual-visualize-this-challenge-registration-48899166724).
 
 These are just a few of the prizes we have up for grabs:
 
@@ -39,8 +41,8 @@ These are just a few of the prizes we have up for grabs:
 
 ## How to Participate
 
-- Register your interest here.
-- Download the dataset.
+- [Register your interest](https://www.eventbrite.ca/e/3rd-annual-visualize-this-challenge-registration-48899166724).
+- [Download the dataset]({{ site.baseurl }}/menu/data.html).
 - Final solutions must be submitted via email to viz-challenge@westgrid.ca no later than November 30,
   2018 (11:59 pm PST)
 - When you submit, please include both your visualization and the workflow, be it a script, a state file,
@@ -58,10 +60,9 @@ These are just a few of the prizes we have up for grabs:
 WestGrid is hosting a special online tutorial that will demonstrate how to create animations on static
 objects (zooming in, fly-troughs, spinning around, turning layers on/off) in both ParaView and VisIt.
 
-Visualize This Webinar: Tips for Creating Animations
-Wednesday, November 15 
-10:00 - 11:00 am PST 
-Register Online Here
+Visualize This Webinar: *Tips for Creating Animations*  
+Data and time TBA  
+Registration will be open shortly
 
 If you have questions about the challenge or your entry, bring them to this session and we'll answer them
 for you!
