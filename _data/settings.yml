@@ -6,7 +6,8 @@ disqus:
 google-ID: 'UA-112060364-1'
 
 menu:
-- {name: 'Data', path: 'menu', url: 'data.html'}
+- {name: 'ScientificData', path: 'menu', url: 'scientific.html'}
+- {name: 'HumanitiesData', path: 'menu', url: 'humanities.html'}
 - {name: 'F.A.Q.', path: 'menu', url: 'faq.html'}
 
 # Available social icons are powered by Font Awesome, so you can use any icon that they offer

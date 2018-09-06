@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Dataset Details
+title: Scientific Dataset Details
 ---
 
 **You will be able to download the dataset on October 1, 2018.**

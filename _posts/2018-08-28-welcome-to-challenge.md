@@ -7,7 +7,7 @@ tags: [documentation,sample]
 image: ospraySpheres.png
 ---
 
-## What is the Visualize This! Challenge?
+## What is the *Visualize This!* Challenge?
 
 Now in its third year, Visualize This! is a Canada-wide competition that aims to celebrate the innovative
 ways visualization can help researchers explore datasets and answer important scientific
@@ -21,9 +21,17 @@ ideas and workflows to life and make them accessible to all Canadian researchers
 To participate in the Challenge, please
 [register your interest](https://www.eventbrite.ca/e/3rd-annual-visualize-this-challenge-registration-48899166724).
 
-This year’s contributed dataset is a multi-scale aerodynamical model of several counter-rotating
-vertical-axis wind turbines. It will be available for download from October 1 to November
-30, 2018. Submissions are due no later than November 30 at midnight (PST).
+## Datasets
+
+This year the *Visualize This!* Challenge is comprised of two separate competitions: scientific
+visualization challenge based on a [molecular dynamics simulation dataset]({{ site.baseurl
+}}/menu/scientific.html), and a humanities visualization challenge based on the
+[Orlando British Women's Writing Dataset]({{ site.baseurl }}/menu/humanities.html). The two competitions
+will run independently from each other, with first / second / third prizes in each track, and we expect
+all participants to choose to compete in one of the tracks.
+
+Both datasets will be available for downloading from October 1 to November 30, 2018. Submissions are due
+no later than November 30 at midnight (PST).
 
 ## Prizes
 
@@ -76,6 +84,8 @@ enables researchers to answer the important scientific questions facing us today
 
 ## More information
 
-[Frequently Asked Questions]({{ site.baseurl }}/menu/faq.html)
+[Scientific Dataset Details]({{ site.baseurl }}/menu/scientific.html)
 
-[Dataset Details]({{ site.baseurl }}/menu/data.html)
+[Humanities Dataset Details]({{ site.baseurl }}/menu/humanities.html)
+
+[Frequently Asked Questions]({{ site.baseurl }}/menu/faq.html)
