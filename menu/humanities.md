@@ -26,23 +26,23 @@ selective linking out to other ontology terms and linked data entities.
 
 ## How to read the data
 
-The dataset contains 1.7 million triples stored in the
+The dataset contains more than 2 million triples stored in the
 [Resource Description Framework](https://www.w3.org/RDF) (RDF) format. RDF is a standard format for
 storing hierarchical or linked data called *graphs* in RDF.
 
-### Learning RDF
+### Learning RDF triplestore
 
 For a good introduction to RDF for those without any prior experience, we recommend saving an example
 from
 [this Mozilla tutorial](https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Tutorial/Introduction_to_RDF)
-as an RDF file `animals.rdf` and then reading and analyzing it from Python using the
+as an RDF file `zoo.rdf` and then reading and analyzing it from Python using the
 [RDFLib library](https://github.com/RDFLib/rdflib). This RDF results in 13 triples describing the
 relationship between objects and their properties.
 
 ```python
 from rdflib import Graph, RDF, URIRef, RDFS
 g = Graph()   # create an empty graph to load data into
-result = g.parse("animals.rdf")   # load the data
+result = g.parse("zoo.rdf")   # load the data
 print("graph has %s statements" % len(g))   # 13 statements
 ```
 
@@ -53,7 +53,26 @@ for subject, predicate, object in g:
     print(subject, predicate, object)
 ```
 
-list all predicates of a given subject:
+resulting in the following output (after manual cleanup and reordering):
+
+```bash
+all-animals is a class for ordered components
+all-animals for element 1 has lion
+all-animals for element 2 has tarantula
+all-animals for element 3 has hippopotamus
+lion is named Lion
+lion is of species Panthera leo
+lion is of class Mammal
+tarantula is named Tarantula
+tarantula is of species Avicularia avicularia
+tarantula is of class Arachnid
+hippopotamus is named Hippopotamus
+hippopotamus is of species Hippopotamus amphibius
+hippopotamus is of class Mammal
+```
+
+These triples completely describes all information stored in the RDF-XML file, in a human-readable
+form. You can also list all predicates of a given subject
 
 ```python
 predicates = g.predicates(subject=URIRef('http://www.some-fictitious-zoo.com/mammals/lion'))
@@ -61,21 +80,25 @@ for j, p in enumerate(predicates):
     print(j, p)
 ```
 
-print all unique subjects, predicates, objects:
+or print all unique subjects, predicates, objects
 
 ```python
 subjects = set(g.subjects())
 for s in subjects:
     print(s)
+
 predicates = set(g.predicates())
 for p in predicates:
     print(p)
+
 objects = set(g.objects())
 for o in objects:
     print(o)
 ```
 
-and so on.
+and then further filter these data with Python. The 13 triples completely describe all data objects and
+their connections in the file, so that one could use this information for plotting or reconstructing the
+original RDF. Note that the source RDF file takes much less space then the resulting triples.
 
 ### Competition data
 
@@ -96,26 +119,37 @@ for s, p, o in g.triples((URIRef("http://cwrc.ca/cwrcdata/Abdy_Maria"), None, No
     print(p, o)
 ```
 
-The bibliography file `Bibliography.rdf` is actually a RDF-TTL file, and you can read it with
+The bibliography file `Bibliography.ttl` is actually a RDF-TTL file, and you can read it with
 RDFLib specifying the format explicitly
 
 ```python
 from rdflib import Graph
 g = Graph()   # create an empty graph to load data into
-result = g.parse("Bibliography/Bibliography.rdf", format="ttl")
+result = g.parse("Bibliography/Bibliography.ttl", format="ttl")
 ```
 
 For the list of variables, their description, and how they interact with each other, it is best to
 consult the [CWRC Ontology Specification](http://sparql.cwrc.ca/ontology/cwrc.html) and the
 [CWRC preamble](http://sparql.cwrc.ca/ontologies/cwrc-preamble-EN.html). The dataset also adops some
 external namespaces, classes and terms listed
-[here](http://sparql.cwrc.ca/ontologies/cwrc-preamble-EN.html#linkages). Consulting these sources in
-relation to the data is key to understanding the dataset.
+[here](http://sparql.cwrc.ca/ontologies/cwrc-preamble-EN.html#linkages). At the beginning of each RDF
+file you will find all the external vocabularies that are used in that file, e.g.
 
+```bash
+$ head Biography/RDF-XML/abdyma.rdf
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:oa="http://www.w3.org/ns/oa#"
+  xmlns:org="http://www.w3.org/ns/org#"
+  xmlns:cwrc="http://sparql.cwrc.ca/ontologies/cwrc#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+```
 
-
-
-
+Consulting these sources in relation to the data is key to understanding the dataset.
 
 ## Research questions
 
@@ -176,7 +210,7 @@ Rosling's Gapminder visualizations such as [this one](https://www.youtube.com/wa
 
 #### An example of an infographics approach
 
-If you Google Emily Brontë, an infographic such as the one shown here is provided.
+If you Google Emily Brontë, you will likely come across this infographic:
 
 ![alt text]({{ site.baseurl }}/assets/img/bronte.png "Emily Brontë")
 
