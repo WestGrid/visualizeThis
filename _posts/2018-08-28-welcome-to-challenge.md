@@ -35,14 +35,14 @@ no later than November 30 at midnight (PST).
 
 ## Prizes
 
-To be eligible for a prize, you must be registered as a participant. Register
-[here](https://www.eventbrite.ca/e/3rd-annual-visualize-this-challenge-registration-48899166724).
+To be eligible for a prize, you must be registered as a
+participant. [Register here](https://www.eventbrite.ca/e/3rd-annual-visualize-this-challenge-registration-48899166724).
 
 These are just a few of the prizes we have up for grabs:
 
-- 43 Ultra HD 4K Multi Client Monitor (Generously donated by Dell EMC)
+<!-- - 43 Ultra HD 4K Multi Client Monitor (Generously donated by Dell EMC) -->
 - High-capacity SSD drives
-- Free registration and subsidized travel to a WestGrid 2018 Research Computing Summer School
+- Free registration and subsidized travel to a WestGrid 2019 Research Computing Summer School
 - Your visualization showcased on the websites of Compute Canada, WestGrid, Compute Ontario, Calcul
   Québec, and ACENET.
 - Opportunity to present to the research community at an upcoming Compute Canada/WestGrid event
@@ -50,30 +50,35 @@ These are just a few of the prizes we have up for grabs:
 ## How to Participate
 
 - [Register your interest](https://www.eventbrite.ca/e/3rd-annual-visualize-this-challenge-registration-48899166724).
-- [Download the dataset]({{ site.baseurl }}/menu/data.html).
+- Starting on October 1, download one of the two datasets: the [molecular dynamics dataset]({{
+  site.baseurl }}/menu/scientific.html) or the [humanities dataset]({{ site.baseurl
+  }}/menu/humanities.html) and start working on your visualization.
 - Final solutions must be submitted via email to viz-challenge@westgrid.ca no later than November 30,
   2018 (11:59 pm PST)
 - When you submit, please include both your visualization and the workflow, be it a script, a state file,
   etc. so that we can reproduce your solution.
 - Please do not attach large files (over 1 MB) to the email, but instead share them with us using any of
-  the popular sharing tools such as Dropbox, Google Drive, ownCloud, or a shared cluster
-  filesystem. Alternatively, you can upload your solution via anonymous ftp (write-only, no read access)
-  “ftp blowfish.westgrid.ca (log in as anonymous, empty password); cd incoming; put yourLocalFile” or
-  with a single command “curl -T yourLocalFile ftp://blowfish.westgrid.ca/incoming/ –user
-  anonymous:”. With multiple files please pack and compress them into an archive before uploading.
+  the popular sharing tools such as Dropbox, Google Drive, <a
+  href="https://www.westgrid.ca/resources_services/data_storage/cloud_storage" target="_blank">WestGrid's
+  ownCloud</a>, <a href="https://transfer.sh" target="_blank">transfer.sh</a>, <a
+  href="https://wetransfer.com" target="_blank">WeTransfer</a>, or a shared cluster filesystem.
+<!-- Alternatively, you can upload your solution via anonymous ftp (write-only, no read access) -->
+<!--   “ftp blowfish.westgrid.ca (log in as anonymous, empty password); cd incoming; put yourLocalFile” or -->
+<!--   with a single command “curl -T yourLocalFile ftp://blowfish.westgrid.ca/incoming/ –user -->
+<!--   anonymous:”. With multiple files please pack and compress them into an archive before uploading. -->
 - Late submissions will not be considered.
 
 ## Want tips for how to make your Visualize This entry stand out?
 
-WestGrid is hosting a special online tutorial that will demonstrate how to create animations on static
-objects (zooming in, fly-troughs, spinning around, turning layers on/off) in both ParaView and VisIt.
+In November WestGrid will host a special online tutorial that will demonstrate how to create animations
+on static objects (zooming in, fly-troughs, spinning around, turning layers on/off) in both ParaView and
+VisIt.
 
 Visualize This Webinar: *Tips for Creating Animations*  
-Data and time TBA  
-Registration will be open shortly
+Data and time: TBA  
 
-If you have questions about the challenge or your entry, bring them to this session and we'll answer them
-for you!
+The webinar link will be sent to all registered competition participants. If you have questions about the
+challenge or your entry, bring them to this session and we'll answer them for you!
 
 ## Why is Visualization Important?
 

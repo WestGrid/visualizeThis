@@ -6,7 +6,7 @@ title: Scientific Dataset Details
 **You will be able to download the dataset on October 1, 2018.**
 
 <!-- Click here to download the dataset as a 293MB compressed ZIP file. If you have any issues accessing the -->
-<!-- dataset using that link, you can try this alternative link or email alex.razoumov@westgrid.ca for -->
+<!-- dataset using that link, you can try this alternative link or email viz-challenge@westgrid.ca for -->
 <!-- assistance. -->
 
 <!-- The dataset is taken from a simulation of the air flow around multiple counter-rotating vertical-axis -->

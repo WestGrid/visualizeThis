@@ -220,19 +220,95 @@ Orlando data? Can you find information in the Orlando data and the ontologies th
 different infographic than Google's? What would an infographic of a larger group, such as all writers
 from a particular historical period, or all writers of a given genre of literature, look like?
 
-
-
-
-
-
-
-
-
-
-
 ## Sample Visualizations
 
-We will provide sample visualizations shortly.
+#### Genres over time
+
+<!-- We will provide sample visualizations shortly. -->
+
+To demonstrate how information can be extracted from the dataset, here we provide a quick visualization
+of genres over time, along with the Python script behind it, using only `Bibliography/Bibliography.ttl`
+and no biographical data. In the plot, colour shows the square root of the frequency of a given genre in
+a given time bin, with 100 bins covering the years 1600-2018.
+
+![alt text]({{ site.baseurl }}/assets/img/genres.png "Genres over time")
+
+This plot has many shortcomings. For example, it includes newer editions of older books. One way to
+correct this would be to eliminate any works that were published not during an author's life. To do this,
+you will need to use files in `Biography/` folder.
+
+```python
+from rdflib import Graph, URIRef
+import re
+import numpy as np
+import plotly.offline as py
+import plotly.graph_objs as go
+
+# read the data
+g = Graph()
+result = g.parse("Bibliography/Bibliography.ttl", format="ttl")
+print("graph has %s statements." % len(g))   # 2,043,156 triples
+
+# plot only these from 241 topics in the dataset
+filteredTopics = ['adventurewriting', 'allegory', 'antiromance', 'artcriticism', 'biography', 'bisexualfiction', 'blackcomedy', 'charade', 'childrensliterature', 'comedy', 'comicbook', 'cookbook', 'detective', 'diary', 'documentary', 'drama', 'dystopia', 'encyclopaedia', 'epistolary', 'essay', 'fairytale', 'fantasy', 'feminist', 'ghoststory', 'gothic', 'guidebook', 'heroic', 'historical', 'literarycriticism', 'lyric', 'melodrama', 'mystery', 'myth', 'philosophy', 'poetry', 'politicalwriting', 'popular', 'propaganda', 'prophecy', 'realist', 'religious', 'romance', 'satire', 'sciencefiction', 'scientificwriting', 'sentimental', 'shortstory', 'socialscience', 'song', 'sonnet', 'textbook', 'thriller', 'tragedy', 'travelwriting', 'treatise', 'utopia', 'youngadultwriting']
+
+books = {}
+filteredTopics.reverse()
+
+# in the dictionary, for each book stored as a key, create a value storing the list of its genres
+for s, p, o in g.triples((None, URIRef("http://sparql.cwrc.ca/ontologies/genre#hasGenre"), None)):
+    subject = s.replace('data:', '')
+    object = o.replace('http://sparql.cwrc.ca/ontologies/genre#', '')
+    if object in filteredTopics:
+        books.setdefault(subject, []).append(object)
+
+# in the same dictionary, add the year of publication to the value list
+for s, p, o in g.triples((None, URIRef("http://id.loc.gov/ontologies/bibframe/date"), None)):
+    subject = s.replace('data:', '').replace('_activity_statement_publisher_0', '').replace('_part_0', '')
+    if len(o) == 0:
+        date = '9999'
+    else:
+        match = re.search(r'[12]\d{3}', o)   # covers years 1000-2999
+        if match:
+            date = match.group(0)
+        else:
+            date = '9999'
+    books.setdefault(subject, []).append(date)
+
+# initialize the frequency array
+start, end, nbins = 1600, 2018, 100
+ntopics = len(filteredTopics)
+frequency = np.zeros((ntopics,nbins),dtype=int)
+
+# compute the frequency of a given genre in a given time bin
+for i in books:
+    genreCheck, yearCheck = False, False
+    year = '9999'
+    for j in books[i]:
+        if j.isdigit() and j != '9999':
+            yearCheck = True
+            year = j
+        else:
+            genreCheck = True
+    if genreCheck and yearCheck:   # can use this book
+        for j in books[i]:
+            if j.isalpha():   # this element is genre
+                ibin = int(float(nbins) * (int(year)-start+0.5) / float(end-start+1))
+                frequency[filteredTopics.index(j),ibin] += 1
+
+# switch from frequency to its sqrt
+frequency = np.sqrt(frequency)
+
+# plot the data
+years = [(i+0.5)/float(nbins)*(end-start+1)+start-0.5 for i in range(nbins)]
+trace = go.Heatmap(z=frequency, x=years, y=filteredTopics, colorscale='Viridis')
+data = [trace]
+layout = go.Layout(margin=go.Margin(l=150,r=50,b=100,t=100,pad=4))
+fig = go.Figure(data=data, layout=layout)
+py.plot(fig, filename='genres.html')
+```
+
+
 
 
 
