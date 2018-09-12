@@ -11,8 +11,9 @@ large protein structure with a cell's membrane. A cell's membrane is typically c
 molecules. The protein structure is a P-glycoprotein (P-gp) embedded into the cell's membrane. Such
 proteins are responsible for the translocation of a wide range of compounds across membranes.
 
-A simple visualization with VMD (below) shows the horizontal cell membrane along with the embedded
-vertical protein. To further differentiate the two, we rendered the protein beads as larger spheres.
+A simple visualization with <a href="https://www.ks.uiuc.edu/Research/vmd" target="_blank">VMD</a>
+(below) shows the horizontal cell membrane along with the embedded vertical protein. To further
+differentiate the two, we rendered the protein beads as larger spheres.
 
 ![alt text]({{ site.baseurl }}/assets/img/both.png "cell membrane with embedded protein")
 
@@ -33,19 +34,19 @@ Water molecules were present in the simulation but were removed from the output 
 ## How to read the data
 
 The dataset was stored in the standard Gromacs trajectory output format, so it can be easily read with
-any compatible software, e.g., with [VMD](https://www.ks.uiuc.edu/Research/vmd) or with
-[MDAnalysis](https://www.mdanalysis.org) Python library. Let us first go through the individual files in
-the dataset.
+any compatible software, e.g., with <a href="https://www.ks.uiuc.edu/Research/vmd"
+target="_blank">VMD</a> or with <a href="https://www.mdanalysis.org" target="_blank">MDAnalysis</a>
+Python library. Let us first go through the individual files in the dataset.
 
 ### Dataset format
 
 The file `sim.part0001_protein_lipid_popc.gro` describes the initial setup with 9453 beads and 1756
-residues in the [standard GRO format](http://manual.gromacs.org/current/online/gro.html), stored as
-human-readable ASCII. The main body of the file lists all beads (one line per bead) with the following
-fields. Here we use the first bead to show the content of all fields:
+residues in the <a href="http://manual.gromacs.org/current/online/gro.html" target="_blank">standard GRO
+format</a>, stored as human-readable ASCII. The main body of the file lists all beads, one line per
+bead. Here we describe formatting of all fields using the first bead as an example:
 
 ```text
-'    1' is the residue number (5 positions): 1 to 1756
+'    1' is the residue number (5 characters): 1 to 1756
 'PRO  ' is the residue name (5 characters): 21 unique names
           ALA=alanine ARG=arginine ASN=asparagine ASP=aspartate
           CYS=cysteine GLN=glutamine GLU=glutamate GLY=glycine
@@ -54,42 +55,43 @@ fields. Here we use the first bead to show the content of all fields:
           SER=serine THR=threonine TRP=tryptophan TYR=tyrosine
           VAL=valine
 '   BB' is the bead name (5 characters): 17 unique elements
-          BB C{1..2}A C{1..3}B C4{A..B} D3A GL{1..2} NC3 PO4 SC{1..4}
-'    1' is the bead number (5 positions): 1 to 9453
-'   6.692' is x-position in nm (8 positions)
-'   8.569' is y-position in nm (8 positions)
-'   8.462' is z-position in nm (8 positions)
-'  0.0038' is x-velocity in nm/ps = km/s (8 positions)
-' -0.0789' is y-velocity in nm/ps = km/s (8 positions)
-' -0.1406' is z-velocity in nm/ps = km/s (8 positions)
+          BB=backbone C{1..2}A C{1..3}B C4{A..B} D3A GL{1..2}
+          NC3=choline PO4=phosphate SC{1..4}
+'    1' is the bead number (5 characters): 1 to 9453
+'   6.692' is x-position in nm (8 characters)
+'   8.569' is y-position in nm (8 characters)
+'   8.462' is z-position in nm (8 characters)
+'  0.0038' is x-velocity in nm/ps = km/s (8 characters)
+' -0.0789' is y-velocity in nm/ps = km/s (8 characters)
+' -0.1406' is z-velocity in nm/ps = km/s (8 characters)
 ```
 
 The files `5us_traj_popc_protein_lipid_popc.xtc` and `15us_traj_protein_lipid_popc.xtc` store the
-trajectory in the [standard XTC format](http://manual.gromacs.org/current/online/xtc.html) during the
-first 5 microseconds (2502 frames) and the last 15 microseconds (8502 frames) of the simulation,
-respectively. These files are stored as binary. Note that this file format is lossy in the sense that
-saved positions are approximate.
+trajectory in the <a href="http://manual.gromacs.org/current/online/xtc.html" target="_blank">standard
+XTC format</a> during the first 5 microseconds (2502 frames) and the last 15 microseconds (8502 frames)
+of the simulation, respectively. These files are stored as binary. Note that this file format is lossy in
+the sense that saved positions are approximate.
 
 The file `system.top` and the four included `martini_v2.*itp` files store a high-level description of the
 system, the topology data (chemical bonds), the description of interactions (force field), and
-bibliography. All of these data is auxiliary and is not created by the simulation: it is provided only
-for reference.
+bibliography. All of these data are auxiliary and are not created by the simulation: they are only
+provided for reference.
 
 ### Reading data with VMD
 
 Loading this dataset into VMD is straightforward. First you load the molecule (the Gromacs GRO file),
 then into this molecule you load the trajectory (XTC) file and wait for all frames to finish loading. The
 visualization at the top of this page was produced with Graphics - Representations: Drawing Method =
-Beads. It is very useful to navigate the dataset by showing different beads and residues, using
-[VMD Selection Language](https://www.ks.uiuc.edu/Research/vmd/vmd-1.3/ug/node132.html) in Graphics -
-Representations: Selected Atoms:
+Beads. It is very useful to navigate the dataset by showing different beads and residues, using <a
+href="https://www.ks.uiuc.edu/Research/vmd/vmd-1.3/ug/node132.html" target="_blank">VMD Selection
+Language</a> in Graphics - Representations: Selected Atoms field:
 
 ```text
 all                # show all beads
 resname POPC       # the entire POPC lipid bilayer
 resid 1181         # one of the "travelling" lipid molecules
 not resname POPC   # P-glycoprotein made of all amino acids
-name GL1   # one of the "beads" in POPC to see two sheets in the bilayer
+name GL1   # one of the "beads" in POPC to see the two sheets
 ```
 
 In the visualization at the top of this page we displayed the selection `not resname POPC` as larger
@@ -101,6 +103,9 @@ how you can process these data with MDAnalysis in Python. You can filter anythin
 and then display these 3D data in ParaView or VisIt.
 
 ### Reading data with MDAnalysis
+
+After you install <a href="https://www.mdanalysis.org" target="_blank">MDAnalysis</a> (`pip install
+--upgrade MDAnalysis `) and download the data, you can analyze it in Python:
 
 ```python
 import MDAnalysis as mda
