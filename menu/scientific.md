@@ -81,10 +81,10 @@ provided for reference.
 
 Loading this dataset into VMD is straightforward. First you load the molecule (the Gromacs GRO file),
 then into this molecule you load the trajectory (XTC) file and wait for all frames to finish loading. The
-visualization at the top of this page was produced with Graphics - Representations: Drawing Method =
-Beads. It is very useful to navigate the dataset by showing different beads and residues, using <a
-href="https://www.ks.uiuc.edu/Research/vmd/vmd-1.3/ug/node132.html" target="_blank">VMD Selection
-Language</a> in Graphics - Representations: Selected Atoms field:
+visualization at the top of this page was produced with `Graphics` &#8594; `Representations` &#8594;
+`Drawing Method` = `Beads`. You can easily navigate the dataset by showing different beads and residues,
+using <a href="https://www.ks.uiuc.edu/Research/vmd/vmd-1.3/ug/node132.html" target="_blank">VMD
+Selection Language</a> in `Graphics` &#8594; `Representations` &#8594; `Selected Atoms` field:
 
 ```text
 all                # show all beads

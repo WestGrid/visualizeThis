@@ -28,12 +28,16 @@ selective linking out to other ontology terms and linked data entities.
 
 The dataset contains more than 2 million triples stored in the
 [Resource Description Framework](https://www.w3.org/RDF) (RDF) format. RDF is a standard format for
-storing hierarchical or linked data called *graphs* in RDF.
+storing linked data called *graphs*.
 
-### Learning RDF triplestore
+### Learning RDF
 
-For a good introduction to RDF for those without any prior experience, we recommend saving an example
-from
+You can find a guided reading list on linked data at
+[this page](https://islandora-claw.github.io/CLAW/user-documentation/intro-to-ld-for-claw), covering
+everything from the fundamentals to more advanced topics.
+
+For a quick hands-on introduction to RDF for those without any prior experience, we recommend saving an
+example from
 [this Mozilla tutorial](https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Tutorial/Introduction_to_RDF)
 as an RDF file `zoo.rdf` and then reading and analyzing it from Python using the
 [RDFLib library](https://github.com/RDFLib/rdflib). This RDF results in 13 triples describing the
