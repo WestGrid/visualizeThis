@@ -41,7 +41,7 @@ participant. [Register here](https://www.eventbrite.ca/e/3rd-annual-visualize-th
 These are just a few of the prizes we have up for grabs:
 
 <!-- - 43 Ultra HD 4K Multi Client Monitor (Generously donated by Dell EMC) -->
-- High-capacity SSD drives
+- High-capacity external SSD drives
 - Free registration and subsidized travel to a WestGrid 2019 Research Computing Summer School
 - Your visualization showcased on the websites of Compute Canada, WestGrid, Compute Ontario, Calcul
   Québec, and ACENET.
@@ -53,8 +53,8 @@ These are just a few of the prizes we have up for grabs:
 - Starting on October 1, download one of the two datasets: the [molecular dynamics dataset]({{
   site.baseurl }}/menu/scientific.html) or the [humanities dataset]({{ site.baseurl
   }}/menu/humanities.html) and start working on your visualization.
-- Final solutions must be submitted via email to viz-challenge@westgrid.ca no later than November 30,
-  2018 (11:59 pm PST)
+- Final solutions must be submitted [via email](mailto:viz-challenge@westgrid.ca) no later than November
+  30, 2018 (11:59 pm PST)
 - When you submit, please include both your visualization and the workflow, be it a script, a state file,
   etc. so that we can reproduce your solution.
 - Please do not attach large files (over 1 MB) to the email, but instead share them with us using any of

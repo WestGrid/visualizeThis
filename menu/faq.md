@@ -7,7 +7,7 @@ title: Frequently Asked Questions (FAQ)
 
 Anyone interested in this competition must
 [register their interest here](https://www.eventbrite.ca/e/3rd-annual-visualize-this-challenge-registration-48899166724). If
-you have any questions, please contact viz-challenge@westgrid.ca.
+you have any questions, please contact us [via email](mailto:viz-challenge@westgrid.ca).
 
 > Can we work in a team?
 
@@ -53,7 +53,7 @@ Yes. Your visualization does not need to be developed or implemented on WestGrid
 platforms. However, if you would like to use WestGrid or Compute Canada computational resources for your
 visualization, you can register for an account
 [here](https://www.computecanada.ca/research-portal/account-management/apply-for-an-account). If you have
-any questions about getting an account, please email accounts@computecanada.ca.
+any questions about getting an account, please email *accounts@computecanada.ca*.
 
 > I am not affiliated with a Canadian university, post-secondary institution, or research
 > organization. Can I participate in the Challenge?
@@ -81,10 +81,10 @@ software you feel comfortable using.
 
 > Will any technical support be provided to participants?
 
-If you have a specific technical question, please email viz-challenge@westgrid.ca or bring it to our
-Visualize This! Tips & Tricks kickoff workshop on September 27. In general, we expect participants to
-create their own visualization(s), so technical help will be limited to answering very specific
-questions.
+If you have a specific technical question, please [email us](mailto:viz-challenge@westgrid.ca) or bring
+it to our Visualize This! Tips & Tricks mid-competition webinar in November. In general, we expect
+participants to create their own visualization(s), so technical help will be limited to answering very
+specific questions.
 
 <!-- Our kickoff workshop will share more details on the dataset, supply sample routines to read the data, and -->
 <!-- demonstrate a few basic visualization examples. Click here to register for the workshop. -->
@@ -111,7 +111,7 @@ competition webpage, and participants can download it anytime after October 1, 2
 
 > How do I submit my solution?
 
-Solutions must be submitted via email to viz-challenge@westgrid.ca.
+Solutions must be submitted [via email](mailto:viz-challenge@westgrid.ca).
 
 Please follow these instructions when submitting:
 - Submit both your visualization and the workflow, be it a script, a state file, etc. so that we can
