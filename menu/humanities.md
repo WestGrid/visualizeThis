@@ -182,14 +182,14 @@ positioned to illuminate:
 These questions could be approached by visualizations in a range of formats including charts, network
 graphs, geospatial maps, heat maps, trend visualization, and infographics.
 
-#### An example of a chart approach
+### An example of a chart approach
 
 For the research question "What is the relevance of family size to religious affiliation, socioeconomic
 status, or other factors?", produce a series of charts (bar, line, pie charts, etc.) that answer this
 question. These could be 2D or 3D. Make the process interactive so that the user can select the factors
 for a multi-dimensional visualization.
 
-#### An example of a network graph approach
+### An example of a network graph approach
 
 What kinds of biographical networks connect British women writers to each other and to other writers? How
 extensive are kinship networks as opposed to networks based on political or religious affiliation?
@@ -199,20 +199,20 @@ Orlando? Can you also map out the person and all the people that they are connec
 this map information change over time period, with ethnicity, religion, etc.? How do the countries
 associated with geographical heritage change over time?
 
-#### An example of a heat map approach
+### An example of a heat map approach
 
 Taking one of the research questions provided above such as "Does social identity become more diverse
 over time?", can you represent this as a series of heat maps that plot out social identity (religion,
 ethnicity, etc.) over time?  This could even be in the form of a video such as
 [this one](https://www.flickr.com/photos/150411108@N06/43350961005/#).
 
-#### An example of trend analysis
+### An example of trend analysis
 
 The research question "How is the number of publications related to the number of children a woman writer
 had?" could be illustrated using dynamic graphs, examples of which can be seen in videos of Hans
 Rosling's Gapminder visualizations such as [this one](https://www.youtube.com/watch?v=jbkSRLYSojo).
 
-#### An example of an infographics approach
+### An example of an infographics approach
 
 If you Google Emily Brontë, you will likely come across this infographic:
 
@@ -226,9 +226,7 @@ from a particular historical period, or all writers of a given genre of literatu
 
 ## Sample Visualizations
 
-#### Genres over time
-
-<!-- We will provide sample visualizations shortly. -->
+### Genres over time
 
 To demonstrate how information can be extracted from the dataset, here we provide a quick visualization
 of genres over time, along with the Python script behind it, using only `Bibliography/Bibliography.ttl`
@@ -312,33 +310,23 @@ fig = go.Figure(data=data, layout=layout)
 py.plot(fig, filename='genres.html')
 ```
 
+### Maps of places associated with women writers in Orlando
 
+These two geospatial visualizations by a researcher show the contrast between the places associated with
+women writers born in the 17th century (top) as compared to those born in the 20th century (bottom).
 
+![alt text]({{ site.baseurl }}/assets/img/01-1600-1700.jpg "women writers in the seventeenth century")
+![alt text]({{ site.baseurl }}/assets/img/01-1900-2000.jpg "women writers in the twentieth century")
 
+### Jewish women writers in Orlando
 
+This visualization by a researcher shows the Cultural Forms properties associated with a subset *Jewish
+women writers* from the Orlando Project. Each of the pink nodes in the graph is a writer, and the
+connections between them highlight how they are related: by ethnicity, religion, gender, etc. Click on
+the image to see the larger version.
 
+Assigning colours to predicates and using them to colour the links probably does not work in this case,
+as we have too many predicates, but this might give you an idea of the direction you can take.
 
-
-<!-- To give you an idea of the type of data in these files and to help you with actual visualizations, we -->
-<!-- provide two sample visualizations, one done with ParaView and the other one with VisIt. Both workflows -->
-<!-- demonstrate loading of all 11 VTK files. -->
-
-<!-- The ParaView state file bladesWithLines.pvsm stores the pipeline to visualize the blades (coloured by the -->
-<!-- pressure on their surfaces) and the airflow around them with uniform-colour streamlines. You can point -->
-<!-- ParaView to this state file with File - Load State..., or start ParaView from the command line with -->
-<!-- "paraview --state=bladesWithLines.pvsm". The resulting image bladesWithLines.png is shown below. -->
-
-<!-- /files/webfm/Communications/bladesWithLines.png -->
-
-<!-- The VisIt Python script positiveNegativePressure.py renders semi-transparent isosurfaces of positive -->
-<!-- (blue) and negative (turquoise) pressure around the blades. You can run this script in VisIt either from -->
-<!-- Controls - Launch CLI... or from Controls - Command..., or from the command line with "visit -nowin -cli -->
-<!-- -s positiveNegativePressure.py". The resulting image positiveNegativePressure0000.png is shown below. -->
-
-<!-- /files/webfm/Communications/positiveNegativePressure0000.png -->
-
-<!-- We are looking for innovative visualizations of this dataset. For example, one could enhance these -->
-<!-- renderings by drawing streamlines around the isosurfaces and producing some animations such as spinning -->
-<!-- the visualization around the vertical axis or gradually turning on/off various visualization -->
-<!-- elements. Speaking more generally, a nice animation would help us explore the spatial range and values of -->
-<!-- multiple variables and show how various elements of the simulation are tied together. -->
+<a href="{{ site.baseurl }}/assets/img/jewishWomenWriters.png" target="_blank">![alt text]({{
+site.baseurl }}/assets/img/jewishWomenWriters.png "women writers in the seventeenth century") </a>

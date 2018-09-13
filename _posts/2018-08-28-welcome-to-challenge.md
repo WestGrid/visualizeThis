@@ -68,17 +68,17 @@ These are just a few of the prizes we have up for grabs:
 <!--   anonymous:”. With multiple files please pack and compress them into an archive before uploading. -->
 - Late submissions will not be considered.
 
-## Want tips for how to make your Visualize This entry stand out?
+<!-- ## Want tips for how to make your Visualize This entry stand out? -->
 
-In November WestGrid will host a special online tutorial that will demonstrate how to create animations
-on static objects (zooming in, fly-troughs, spinning around, turning layers on/off) in both ParaView and
-VisIt.
+<!-- In November WestGrid will host a special online tutorial that will demonstrate how to create animations -->
+<!-- on static objects (zooming in, fly-troughs, spinning around, turning layers on/off) in both ParaView and -->
+<!-- VisIt. -->
 
-Visualize This Webinar: *Tips for Creating Animations*  
-Data and time: TBA  
+<!-- Visualize This Webinar: *Tips for Creating Animations*   -->
+<!-- Data and time: TBA   -->
 
-The webinar link will be sent to all registered competition participants. If you have questions about the
-challenge or your entry, bring them to this session and we'll answer them for you!
+<!-- The webinar link will be sent to all registered competition participants. If you have questions about the -->
+<!-- challenge or your entry, bring them to this session and we'll answer them for you! -->
 
 ## Why is Visualization Important?
 

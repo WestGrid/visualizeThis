@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Frequently Asked Questions (FAQ)
+title: Frequently Asked Questions
 ---
 
 > How do I register to participate in the Visualize This! Challenge?
@@ -81,10 +81,9 @@ software you feel comfortable using.
 
 > Will any technical support be provided to participants?
 
-If you have a specific technical question, please [email us](mailto:viz-challenge@westgrid.ca) or bring
-it to our Visualize This! Tips & Tricks mid-competition webinar in November. In general, we expect
-participants to create their own visualization(s), so technical help will be limited to answering very
-specific questions.
+If you have a specific technical question, please [email us](mailto:viz-challenge@westgrid.ca). In
+general, we expect participants to create their own visualization(s), so technical help will be limited
+to answering very specific questions.
 
 <!-- Our kickoff workshop will share more details on the dataset, supply sample routines to read the data, and -->
 <!-- demonstrate a few basic visualization examples. Click here to register for the workshop. -->
