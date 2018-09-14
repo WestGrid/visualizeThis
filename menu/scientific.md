@@ -80,8 +80,14 @@ provided for reference.
 ### Reading data with VMD
 
 Loading this dataset into VMD is straightforward. First you load the molecule (the Gromacs GRO file),
-then into this molecule you load the trajectory (XTC) file and wait for all frames to finish loading. The
-visualization at the top of this page was produced with `Graphics` &#8594; `Representations` &#8594;
+then into this molecule you load the trajectory (XTC) file and wait for all frames to finish loading. On
+Unix-like systems (Linux, Mac) you can automate reading with a single command:
+
+```bash
+$ vmd sim.part0001_protein_lipid_popc.gro 5us_traj_popc_protein_lipid_popc.xtc
+```
+
+The visualization at the top of this page was produced with `Graphics` &#8594; `Representations` &#8594;
 `Drawing Method` = `Beads`. You can easily navigate the dataset by showing different beads and residues,
 using <a href="https://www.ks.uiuc.edu/Research/vmd/vmd-1.3/ug/node132.html" target="_blank">VMD
 Selection Language</a> in `Graphics` &#8594; `Representations` &#8594; `Selected Atoms` field:
@@ -142,63 +148,15 @@ u.trajectory[-1]   # load the last frame
 
 This simulation shows that the P-gp molecule acts as a lipid transporter protein, flipping membrane's
 lipids from the inner to the outer leaflet. We would like you to visualize this process, finding those
-lipids that bin to the protein.
+lipids that bind to the protein.
 
 For example, it would be nice to see specific interactions between lipids and protein, the frequency of
 the interaction and for how long such interaction is occurring. You can do this by considering the PO4
 bead of the lipids and its interactions with SC{1..4} beads in the cavity of the protein.
 
-
-
-
-
-
-<!-- ## Sample Visualizations -->
-
-<!-- We will provide sample visualizations shortly. -->
-
-
-
-
-
-
-<!-- Both ParaView and VisIt can open standard VTK unstructured grid and polygonal data files. These files can -->
-<!-- also be read in Python and C++ using the VTK library (http://www.vtk.org). Note that the volumetric file -->
-<!-- air.vtu contains over 16 million cells so it might take some time to read it, depending on your -->
-<!-- computer's speed. -->
-
-<!-- As a result, rendering might also take some time, and can be automated with scripting, so that you could -->
-<!-- leave a script running for a few hours and come back to let's say several hundred frames of a movie, or -->
-<!-- it could be run in parallel on a cluster. -->
-
-<!-- We hosted a kickoff webinar on Sep-27 that gave a walk-through of the dataset. Click here to view the -->
-<!-- archive recording (to get right to the dataset tour, skip ahead to 4:04 in the video). -->
-
-
-
-
-
-
-<!-- To give you an idea of the type of data in these files and to help you with actual visualizations, we -->
-<!-- provide two sample visualizations, one done with ParaView and the other one with VisIt. Both workflows -->
-<!-- demonstrate loading of all 11 VTK files. -->
-
-<!-- The ParaView state file bladesWithLines.pvsm stores the pipeline to visualize the blades (coloured by the -->
-<!-- pressure on their surfaces) and the airflow around them with uniform-colour streamlines. You can point -->
-<!-- ParaView to this state file with File - Load State..., or start ParaView from the command line with -->
-<!-- "paraview --state=bladesWithLines.pvsm". The resulting image bladesWithLines.png is shown below. -->
-
-<!-- /files/webfm/Communications/bladesWithLines.png -->
-
-<!-- The VisIt Python script positiveNegativePressure.py renders semi-transparent isosurfaces of positive -->
-<!-- (blue) and negative (turquoise) pressure around the blades. You can run this script in VisIt either from -->
-<!-- Controls - Launch CLI... or from Controls - Command..., or from the command line with "visit -nowin -cli -->
-<!-- -s positiveNegativePressure.py". The resulting image positiveNegativePressure0000.png is shown below. -->
-
-<!-- /files/webfm/Communications/positiveNegativePressure0000.png -->
-
-<!-- We are looking for innovative visualizations of this dataset. For example, one could enhance these -->
-<!-- renderings by drawing streamlines around the isosurfaces and producing some animations such as spinning -->
-<!-- the visualization around the vertical axis or gradually turning on/off various visualization -->
-<!-- elements. Speaking more generally, a nice animation would help us explore the spatial range and values of -->
-<!-- multiple variables and show how various elements of the simulation are tied together. -->
+It could be interesting to show any other correlations or unusual features in the data. You could look at
+the differences in the system between the beginning and the end of the simulation, when equilibrium is
+assumed to be achieved. You could also visualize the differences between lipids in close proximity to the
+protein and at the periphery. Another possibility is to build a view from a certain atom's perspective,
+given that it provides some interesting insight. In other words, we would love to see any innovative (and
+reproducible!) visualizations of this dataset.
