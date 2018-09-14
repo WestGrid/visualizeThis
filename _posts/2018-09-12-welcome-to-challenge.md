@@ -9,12 +9,12 @@ image: ospraySpheres.png
 
 ## What is the *Visualize This!* Challenge?
 
-Now in its third year, Visualize This! is a Canada-wide competition that aims to celebrate the innovative
-ways visualization can help researchers explore datasets and answer important scientific
-questions. Visualize This! is your chance to challenge your creativity, experiment with new visualization
-tools, and contribute to the growth of data visualization in Canada!
+Now in its third year, *Visualize This!* is a Canada-wide competition that aims to celebrate the
+innovative ways visualization can help researchers explore datasets and answer important scientific
+questions. *Visualize This!* is your chance to challenge your creativity, experiment with new
+visualization tools, and contribute to the growth of data visualization in Canada!
 
-This year’s Visualize This! Challenge is hosted by WestGrid, a regional partner of Compute
+This year’s *Visualize This!* Challenge is hosted by WestGrid, a regional partner of Compute
 Canada. Together with the Compute Canada Visualization Team, we want to bring your creative visualization
 ideas and workflows to life and make them accessible to all Canadian researchers!
 
