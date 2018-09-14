@@ -160,3 +160,9 @@ assumed to be achieved. You could also visualize the differences between lipids 
 protein and at the periphery. Another possibility is to build a view from a certain atom's perspective,
 given that it provides some interesting insight. In other words, we would love to see any innovative (and
 reproducible!) visualizations of this dataset.
+
+For more visualization examples, please check the <a
+href="https://www.biorxiv.org/content/early/2017/09/20/191239" target="_blank">simulation paper</a>
+(E. Barreto-Ojeda et al. 2017) behind this dataset. The dataset corresponds to what is called system S1
+in Table 1. Figure 1 shows two bead trajectories in the POPC bilayer, while Figure 7 plots lipid-uptake
+pathways through the cell membrane.
