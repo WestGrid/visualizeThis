@@ -22,7 +22,8 @@ digitized versions of primary texts.
 
 The internal linking of biographical information is using the
 [Canadian Writing Research Collaboratory (CWRC) ontology](http://sparql.cwrc.ca/ontology/cwrc.html), with
-selective linking out to other ontology terms and linked data entities.
+selective linking out to other ontology terms and linked data entities. The dataset makes extensive use
+of the Web Annotation Data model, the Simple Event Model, and the BIBFRAME ontology.
 
 ## How to read the data
 
@@ -75,7 +76,7 @@ hippopotamus is of species Hippopotamus amphibius
 hippopotamus is of class Mammal
 ```
 
-These triples completely describes all information stored in the RDF-XML file, in a human-readable
+These triples completely describe all information stored in the RDF-XML file, in a human-readable
 form. You can also list all predicates of a given subject
 
 ```python
@@ -106,16 +107,34 @@ original RDF. Note that the source RDF file takes much less space then the resul
 
 ### Competition data
 
-The competition dataset contains 5475 files across three directories
+The competition dataset contains 5475 files across three directories:
 
-```bash
-Bibliography/ Biography/ CulturalForms/
-```
+1. `Biography` contains most biographical information from the Orlando dataset falling into one of the
+   categories in the table below, as well as biographical materials that don't align easily with the
+   specified categories.
+1. `CulturalForms` is a subset of `Biography` focused on social identities.
+1. `Bibliography` stores standard bibliographic metadata using the Bibframe ontology, including data
+   about works published by the authors whose lives are described in the dataset, plus all works
+   referenced in the Orlando textbase.
 
-Some of the files are stored in both RDF-XML and RDF-TTL formats, so you can choose the format you
-like. In addition to using separate generators `g.subjects()`, `g.predicates()`, `g.objects()` as
-outlined above, you can also list triples that match a given pattern, e.g., a given subject with all
-possible predicates and objects:
+| Category | Description |
+| ------------- | --------------- |
+| Birth and Death | Birth and death dates for writers for whom these are known, in some cases including birth order within family and cause of death |
+| Cultural identities | Information on the social identities associated with writers, ranging from language, religion, social class, race, colour, or ethnicity to nationality. Such identities shift both historically and at times within writers’ lives |
+| Family relations | Information on the family members, including spouses, of writers, and at times information related to their occupations or cultural identities |
+| Friends | Information about loose associations through to close and enduring friendships |
+| Intimate relationships | Information on both erotic and non-erotic ties |
+| Leisure and Society | Information on social activities |
+| Political Affiliation | Information on writers’ political activities including their affiliations with particular groups or organizations and their degrees of involvement |
+| Spatial activities | Information on writers’ visits and travels to particular locations; does not include residences or migration |
+| Violence | Information on writers’ experiences of violence on a range of scales |
+| Wealth | Information concerning writers’ poverty, income, and wealth |
+| Health | Information on writers’ physical and mental health and illnesses |
+
+The files are stored in both RDF-XML and RDF-TTL formats, so you can choose the format you like. In
+addition to using separate generators `g.subjects()`, `g.predicates()`, `g.objects()` as outlined above,
+you can also list triples that match a given pattern, e.g. a given subject with all possible predicates
+and objects:
 
 ```python
 # list all predicates and objects of a given subject
@@ -123,8 +142,8 @@ for s, p, o in g.triples((URIRef("http://cwrc.ca/cwrcdata/Abdy_Maria"), None, No
     print(p, o)
 ```
 
-The bibliography file `Bibliography.ttl` is actually a RDF-TTL file, and you can read it with
-RDFLib specifying the format explicitly
+The bibliography file `Bibliography.ttl` provides the data using Terse RDF Triple Language (TTL), and you
+can read it with RDFLib specifying the format explicitly:
 
 ```python
 from rdflib import Graph
@@ -134,8 +153,8 @@ result = g.parse("Bibliography/Bibliography.ttl", format="ttl")
 
 For the list of variables, their description, and how they interact with each other, it is best to
 consult the [CWRC Ontology Specification](http://sparql.cwrc.ca/ontology/cwrc.html) and the
-[CWRC preamble](http://sparql.cwrc.ca/ontologies/cwrc-preamble-EN.html). The dataset also adops some
-external namespaces, classes and terms listed
+[CWRC preamble](http://sparql.cwrc.ca/ontologies/cwrc-preamble-EN.html). The dataset also adopts some
+external namespaces, classes, and terms listed
 [here](http://sparql.cwrc.ca/ontologies/cwrc-preamble-EN.html#linkages). At the beginning of each RDF
 file you will find all the external vocabularies that are used in that file, e.g.
 
@@ -235,9 +254,10 @@ a given time bin, with 100 bins covering the years 1600-2018.
 
 ![alt text]({{ site.baseurl }}/assets/img/genres.png "Genres over time")
 
-This plot has many shortcomings. For example, it includes newer editions of older books. One way to
-correct this would be to eliminate any works that were published not during an author's life. To do this,
-you will need to use files in `Biography/` folder.
+This plot has many shortcomings. For example, it represents absolute and not relative frequency, and it
+includes newer editions of older books. One way to correct this latter shortcoming would be to eliminate
+any works that were not published during an author's life. To do this, you will need to use files in
+`Biography/` folder.
 
 ```python
 from rdflib import Graph, URIRef
@@ -305,7 +325,7 @@ frequency = np.sqrt(frequency)
 years = [(i+0.5)/float(nbins)*(end-start+1)+start-0.5 for i in range(nbins)]
 trace = go.Heatmap(z=frequency, x=years, y=filteredTopics, colorscale='Viridis')
 data = [trace]
-layout = go.Layout(margin=go.Margin(l=150,r=50,b=100,t=100,pad=4))
+layout = go.Layout(margin=go.Margin(l=150,r=50,b=50,t=10,pad=4), xaxis=dict(title='Year',titlefont=dict(size=18)), yaxis=dict(title='Genre',titlefont=dict(size=18)))
 fig = go.Figure(data=data, layout=layout)
 py.plot(fig, filename='genres.html')
 ```
