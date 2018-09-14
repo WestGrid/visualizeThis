@@ -109,9 +109,9 @@ original RDF. Note that the source RDF file takes much less space then the resul
 
 The competition dataset contains 5475 files across three directories:
 
-1. `Biography` contains most biographical information from the Orlando dataset falling into one of the
-   categories in the table below, as well as biographical materials that don't align easily with the
-   specified categories.
+1. `Biography` stores most biographical information from the Orlando dataset in the categories listed in
+   the table below, as well as biographical materials that don't align easily with the specified
+   categories.
 1. `CulturalForms` is a subset of `Biography` focused on social identities.
 1. `Bibliography` stores standard bibliographic metadata using the Bibframe ontology, including data
    about works published by the authors whose lives are described in the dataset, plus all works
