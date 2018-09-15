@@ -5,12 +5,12 @@ title: Humanities Dataset Details
 
 **You will be able to download this dataset on October 1, 2018.**
 
-The Orlando British Women's Writing Dataset provides a rich set of linked open data representing women's
-literary history from the beginnings to the present, concentrated on writing in English in the British
-Isles but with tentacles out to other languages, literary traditions, and parts of the world. It emerges
-from the ongoing experiments in literary history being conducted by
-[the Orlando Project](http://www.artsrn.ualberta.ca/orlando), whose textbase is published and regularly
-updated and augmented as
+The Orlando British Women's Writing Dataset (Release 1: Biography and Bibliography) provides a rich set
+of linked open data representing women's literary history from the beginnings to the present,
+concentrated on writing in English in the British Isles but with tentacles out to other languages,
+literary traditions, and parts of the world. It emerges from the ongoing experiments in literary history
+being conducted by [the Orlando Project](http://www.artsrn.ualberta.ca/orlando), whose textbase is
+published and regularly updated and augmented as
 [Orlando: Women’s Writing in the British Isles from the Beginnings to the Present](http://orlando.cambridge.org)
 by Cambridge University Press since 2006, and from the
 [Canadian Writing Research Collaboratory](https://beta.cwrc.ca)'s work in Linked Open Data.

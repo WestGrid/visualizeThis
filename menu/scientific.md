@@ -158,11 +158,16 @@ It could be interesting to show any other correlations or unusual features in th
 the differences in the system between the beginning and the end of the simulation, when equilibrium is
 assumed to be achieved. You could also visualize the differences between lipids in close proximity to the
 protein and at the periphery. Another possibility is to build a view from a certain atom's perspective,
-given that it provides some interesting insight. In other words, we would love to see any innovative (and
-reproducible!) visualizations of this dataset.
+given that it provides some interesting insight.
+
+You can use any open-source software to visualize the data, including <a
+href="https://www.ks.uiuc.edu/Research/vmd" target="_blank">VMD</a>, <a href="https://pymol.org"
+target="_blank">PyMol</a>, <a href="https://www.paraview.org" target="_blank">ParaView</a>, <a
+href="https://wci.llnl.gov/simulation/computer-codes/visit" target="_blank">VisIt</a>, but your
+visualization should be sufficiently innovative (and reproducible!).
 
 For more visualization examples, please check the <a
-href="https://www.biorxiv.org/content/early/2017/09/20/191239" target="_blank">simulation paper</a>
+href="http://jgp.rupress.org/content/early/2018/02/05/jgp.201711907" target="_blank">simulation paper</a>
 (E. Barreto-Ojeda et al. 2017) behind this dataset. The dataset corresponds to what is called system S1
 in Table 1. Figure 1 shows two bead trajectories in the POPC bilayer, while Figure 7 plots lipid-uptake
 pathways through the cell membrane.
