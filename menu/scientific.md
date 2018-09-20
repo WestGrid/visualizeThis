@@ -77,6 +77,9 @@ system, the topology data (chemical bonds), the description of interactions (for
 bibliography. All of these data are auxiliary and are not created by the simulation: they are only
 provided for reference.
 
+The file `pgp_m_A+pgp_m_B.itp` contains information about the protein structure and is optional in the
+analysis.
+
 ### Reading data with VMD
 
 Loading this dataset into VMD is straightforward. First you load the molecule (the Gromacs GRO file),
