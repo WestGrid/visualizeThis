@@ -69,7 +69,7 @@ bead. Here we describe formatting of all fields using the first bead as an examp
 The files `5us_traj_popc_protein_lipid_popc.xtc` and `15us_traj_protein_lipid_popc.xtc` store the
 trajectory in the <a href="http://manual.gromacs.org/current/online/xtc.html" target="_blank">standard
 XTC format</a> during the first 5 microseconds (2502 frames) and the last 15 microseconds (8502 frames)
-of the simulation, respectively. These files are stored as binary. Note that this file format is lossy in
+of the simulation, respectively. These files store data as binary. Note that this file format is lossy in
 the sense that saved positions are approximate.
 
 The file `system.top` and the four included `martini_v2.*itp` files store a high-level description of the
