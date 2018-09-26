@@ -269,7 +269,7 @@ import plotly.graph_objs as go
 # read the data
 g = Graph()
 result = g.parse("Bibliography/Bibliography.ttl", format="ttl")
-print("graph has %s statements." % len(g))   # 2,043,156 triples
+print("graph has %s statements." % len(g))   # 2,240,080 triples
 
 # plot only these from 241 topics in the dataset
 filteredTopics = ['adventurewriting', 'allegory', 'antiromance', 'artcriticism', 'biography', 'bisexualfiction', 'blackcomedy', 'charade', 'childrensliterature', 'comedy', 'comicbook', 'cookbook', 'detective', 'diary', 'documentary', 'drama', 'dystopia', 'encyclopaedia', 'epistolary', 'essay', 'fairytale', 'fantasy', 'feminist', 'ghoststory', 'gothic', 'guidebook', 'heroic', 'historical', 'literarycriticism', 'lyric', 'melodrama', 'mystery', 'myth', 'philosophy', 'poetry', 'politicalwriting', 'popular', 'propaganda', 'prophecy', 'realist', 'religious', 'romance', 'satire', 'sciencefiction', 'scientificwriting', 'sentimental', 'shortstory', 'socialscience', 'song', 'sonnet', 'textbook', 'thriller', 'tragedy', 'travelwriting', 'treatise', 'utopia', 'youngadultwriting']
@@ -286,7 +286,7 @@ for s, p, o in g.triples((None, URIRef("http://sparql.cwrc.ca/ontologies/genre#h
 
 # in the same dictionary, add the year of publication to the value list
 for s, p, o in g.triples((None, URIRef("http://id.loc.gov/ontologies/bibframe/date"), None)):
-    subject = s.replace('data:', '').replace('_activity_statement_publisher_0', '').replace('_part_0', '')
+    subject = s.replace('data:', '').replace('_activity_statement_0', '').replace('_host_0', '')
     if len(o) == 0:
         date = '9999'
     else:
