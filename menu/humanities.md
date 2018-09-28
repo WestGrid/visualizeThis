@@ -27,7 +27,7 @@ of the Web Annotation Data model, the Simple Event Model, and the BIBFRAME ontol
 
 ## How to read the data
 
-The dataset contains more than 2 million triples stored in the
+The dataset contains 3,513,750 triples stored in the
 [Resource Description Framework](https://www.w3.org/RDF) (RDF) format. RDF is a standard format for
 storing linked data called *graphs*.
 
@@ -107,29 +107,33 @@ original RDF. Note that the source RDF file takes much less space then the resul
 
 ### Competition data
 
-The competition dataset contains 5475 files across three directories:
+The competition dataset contains three files in two formats (RDF-XML and RDF-TTL):
 
-1. `Biography` stores most biographical information from the Orlando dataset in the categories listed in
-   the table below, as well as biographical materials that don't align easily with the specified
-   categories.
-1. `CulturalForms` is a subset of `Biography` focused on social identities.
-1. `Bibliography` stores standard bibliographic metadata using the Bibframe ontology, including data
+1. `biographySubset` stores most biographical information from the Orlando dataset in the categories
+   listed in the table below, as well as biographical materials that don't align easily with the
+   specified categories.
+1. `culturalFormsSubset` is a subset of `Biography` focused on social identities.
+1. `bibliographySubset` stores standard bibliographic metadata using the Bibframe ontology, including data
    about works published by the authors whose lives are described in the dataset, plus all works
    referenced in the Orlando textbase.
 
+<!-- 1. what is bioAndBiblio.ttl? -->
+   
 | Category | Description |
 | ------------- | --------------- |
 | Birth and Death | Birth and death dates for writers for whom these are known, in some cases including birth order within family and cause of death |
 | Cultural identities | Information on the social identities associated with writers, ranging from language, religion, social class, race, colour, or ethnicity to nationality. Such identities shift both historically and at times within writers’ lives |
+| Education | Includes links to instructors, schools, subjects of study, and credentials earned |
 | Family relations | Information on the family members, including spouses, of writers, and at times information related to their occupations or cultural identities |
 | Friends | Information about loose associations through to close and enduring friendships |
+| Health | Information on writers’ physical and mental health and illnesses |
 | Intimate relationships | Information on both erotic and non-erotic ties |
 | Leisure and Society | Information on social activities |
+| Occupations | Covers both significant activities of and jobs held by writers |
 | Political Affiliation | Information on writers’ political activities including their affiliations with particular groups or organizations and their degrees of involvement |
-| Spatial activities | Information on writers’ visits and travels to particular locations; does not include residences or migration |
+| Spatial activities | Information on writers’ residences, visits, travels, and migration to particular locations. Spatial data coordinates are granular to the level of settlement only |
 | Violence | Information on writers’ experiences of violence on a range of scales |
 | Wealth | Information concerning writers’ poverty, income, and wealth |
-| Health | Information on writers’ physical and mental health and illnesses |
 
 The files are stored in both RDF-XML and RDF-TTL formats, so you can choose the format you like. In
 addition to using separate generators `g.subjects()`, `g.predicates()`, `g.objects()` as outlined above,
@@ -268,7 +272,7 @@ import plotly.graph_objs as go
 
 # read the data
 g = Graph()
-result = g.parse("Bibliography/Bibliography.ttl", format="ttl")
+result = g.parse("bibliographySubset.ttl", format="ttl")
 print("graph has %s statements." % len(g))   # 2,240,080 triples
 
 # plot only these from 241 topics in the dataset
