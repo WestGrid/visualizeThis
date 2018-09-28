@@ -27,7 +27,7 @@ of the Web Annotation Data model, the Simple Event Model, and the BIBFRAME ontol
 
 ## How to read the data
 
-The dataset contains 3,513,750 triples stored in the
+The dataset contains 3,321,746 triples stored in the
 [Resource Description Framework](https://www.w3.org/RDF) (RDF) format. RDF is a standard format for
 storing linked data called *graphs*.
 
@@ -109,16 +109,15 @@ original RDF. Note that the source RDF file takes much less space then the resul
 
 The competition dataset contains three files in two formats (RDF-XML and RDF-TTL):
 
-1. `biographySubset` stores most biographical information from the Orlando dataset in the categories
-   listed in the table below, as well as biographical materials that don't align easily with the
-   specified categories.
-1. `culturalFormsSubset` is a subset of `Biography` focused on social identities.
-1. `bibliographySubset` stores standard bibliographic metadata using the Bibframe ontology, including data
-   about works published by the authors whose lives are described in the dataset, plus all works
-   referenced in the Orlando textbase.
+1. `biography` (1,081,674 triples) stores most biographical information from the Orlando dataset in the
+   categories listed in the table below, as well as biographical materials that don't align easily with
+   the specified categories.
+1. `bibliography` (2,240,072 triples) stores standard bibliographic metadata using the Bibframe ontology,
+   including data about works published by the authors whose lives are described in the dataset, plus all
+   works referenced in the Orlando textbase.
+1. `culturalFormsSubset` is a subset of `biography` focused on social identities. We thought it might be
+   useful to have cultural identities in a separate file, if you only want to work with these data.
 
-<!-- 1. what is bioAndBiblio.ttl? -->
-   
 | Category | Description |
 | ------------- | --------------- |
 | Birth and Death | Birth and death dates for writers for whom these are known, in some cases including birth order within family and cause of death |
@@ -146,13 +145,13 @@ for s, p, o in g.triples((URIRef("http://cwrc.ca/cwrcdata/Abdy_Maria"), None, No
     print(p, o)
 ```
 
-The bibliography file `Bibliography.ttl` provides the data using Terse RDF Triple Language (TTL), and you
+The bibliography file `bibliography.ttl` provides the data using Terse RDF Triple Language (TTL), and you
 can read it with RDFLib specifying the format explicitly:
 
 ```python
 from rdflib import Graph
 g = Graph()   # create an empty graph to load data into
-result = g.parse("Bibliography/Bibliography.ttl", format="ttl")
+result = g.parse("bibliography.ttl", format="ttl")
 ```
 
 For the list of variables, their description, and how they interact with each other, it is best to
@@ -252,9 +251,9 @@ from a particular historical period, or all writers of a given genre of literatu
 ### Genres over time
 
 To demonstrate how information can be extracted from the dataset, here we provide a quick visualization
-of genres over time, along with the Python script behind it, using only `Bibliography/Bibliography.ttl`
-and no biographical data. In the plot, colour shows the square root of the frequency of a given genre in
-a given time bin, with 100 bins covering the years 1600-2018.
+of genres over time, along with the Python script behind it, using only `bibliography.ttl` and no
+biographical data. In the plot, colour shows the square root of the frequency of a given genre in a given
+time bin, with 100 bins covering the years 1600-2018.
 
 ![alt text]({{ site.baseurl }}/assets/img/genres.png "Genres over time")
 
@@ -272,7 +271,7 @@ import plotly.graph_objs as go
 
 # read the data
 g = Graph()
-result = g.parse("bibliographySubset.ttl", format="ttl")
+result = g.parse("bibliography.ttl", format="ttl")
 print("graph has %s statements." % len(g))   # 2,240,080 triples
 
 # plot only these from 241 topics in the dataset
