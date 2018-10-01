@@ -3,7 +3,10 @@ layout: page
 title: Scientific Dataset Details
 ---
 
-**You will be able to download this dataset on October 1, 2018.**
+<!-- **You will be able to download this dataset on October 1, 2018.** -->
+
+**This dataset is [now available for downloading]({{ site.baseurl
+}}/journal/datasets-now-available.html).**
 
 This dataset is from a coarse-grained Gromacs molecular dynamics (MD) simulation of interaction of a
 large protein structure with a cell's membrane. A cell's membrane is typically composed of two leaflets

@@ -3,7 +3,10 @@ layout: page
 title: Humanities Dataset Details
 ---
 
-**You will be able to download this dataset on October 1, 2018.**
+<!-- **You will be able to download this dataset on October 1, 2018.** -->
+
+**This dataset is [now available for downloading]({{ site.baseurl
+}}/journal/datasets-now-available.html).**
 
 The Orlando British Women's Writing Dataset (Release 1: Biography and Bibliography) provides a rich set
 of linked open data representing women's literary history from the beginnings to the present,
