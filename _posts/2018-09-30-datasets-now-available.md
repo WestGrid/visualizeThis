@@ -22,8 +22,10 @@ Both datasets are now available for downloading. Please select one of the two co
   [zipped RDF-XML files](https://owncloud.westgrid.ca/index.php/s/0NOio2vRbgjUjwo/download) (23.1MB) and
   [zipped RDF-TTL files](https://owncloud.westgrid.ca/index.php/s/4B4ATo4NMWwkUW3/download)
   (17.6MB). Alternatively, you can retrieve RDF triples from a <a
-  href="https://en.wikipedia.org/wiki/SPARQL" target="_blank">SPARQL</a> end point (link will be added
-  shortly).
+  href="https://en.wikipedia.org/wiki/SPARQL" target="_blank">SPARQL</a> end point at <a
+  href="http://sparql.cwrc.ca/sparql" target="_blank">http://sparql.cwrc.ca/sparql</a> as detailed <a
+  href="http://sparql.cwrc.ca/vizchallenge" target="_blank">here</a> -- look for a sample query at the
+  end.
 
 For more information, please check the [Scientific Dataset Details]({{ site.baseurl
 }}/menu/scientific.html) and the [Humanities Dataset Details]({{ site.baseurl }}/menu/humanities.html),
