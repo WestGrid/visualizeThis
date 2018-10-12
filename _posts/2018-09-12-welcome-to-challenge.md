@@ -40,7 +40,7 @@ participant. [Register here](https://www.eventbrite.ca/e/3rd-annual-visualize-th
 
 These are just a few of the prizes we have up for grabs:
 
-<!-- - 43 Ultra HD 4K Multi Client Monitor (Generously donated by Dell EMC) -->
+- Ultra HD 4K monitor (generously donated by Dell EMC)
 - High-capacity external SSD drives
 - Free registration and subsidized travel to a WestGrid 2019 Research Computing Summer School
 - Your visualization showcased on the websites of Compute Canada, WestGrid, Compute Ontario, Calcul
