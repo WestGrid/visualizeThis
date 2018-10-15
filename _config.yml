@@ -21,8 +21,9 @@ plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-t
 
 # Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
 title:		     'Visualize This!'
-description:	     'challenge'
+description:	     'visualization competition'
 author:              'WestGrid'
+url:                 'https://westgrid.github.io/visualizeThis'
 
 # RSS 2.0 can be used instead of Atom by uncommenting following two lines
 #feed:
