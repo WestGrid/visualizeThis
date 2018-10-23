@@ -7,8 +7,8 @@ tags: [documentation,sample]
 image: dellMonitor.jpg
 ---
 
-Entered our 2018 *Visualize This!* Challenge yet? We have a new prize up for grabs, generously donated by
-Dell EMC.
+Entered our 2018 *Visualize This!* Challenge yet? We have a new prize up for grabs, a 43" Dell 4K
+monitor, generously donated by Dell EMC.
 
 <img src="{{ site.baseurl }}/assets/img/dellEMCLogo.png" width="300" />
 
