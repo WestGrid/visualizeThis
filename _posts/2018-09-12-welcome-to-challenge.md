@@ -42,7 +42,7 @@ These are just a few of the prizes we have up for grabs:
 
 - Dell 43" Ultra HD 4K monitor (generously donated by Dell EMC)
 <img src="{{ site.baseurl }}/assets/img/dellEMCLogo.png" width="300" />
-- High-capacity external SSD drives
+- High-capacity external SSDs
 - Free registration and subsidized travel to a WestGrid 2019 Research Computing Summer School
 - Your visualization showcased on the websites of Compute Canada, WestGrid, Compute Ontario, Calcul
   Québec, and ACENET.

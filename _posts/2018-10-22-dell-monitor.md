@@ -12,7 +12,7 @@ monitor, generously donated by Dell EMC.
 
 <img src="{{ site.baseurl }}/assets/img/dellEMCLogo.png" width="300" />
 
-Smaller prizes include fast external SSD drives and subsidized travel to a WestGrid 2019 Research
+Smaller prizes include fast external SSDs and subsidized travel to a WestGrid 2019 Research
 Computing Summer School.
 
 For more information, please check the [Scientific Dataset]({{ site.baseurl }}/menu/scientific.html) and
