@@ -275,7 +275,7 @@ import plotly.graph_objs as go
 # read the data
 g = Graph()
 result = g.parse("bibliography.ttl", format="ttl")
-print("graph has %s statements." % len(g))   # 2,240,080 triples
+print("graph has %s statements." % len(g))   # 2,240,072 triples
 
 # plot only these from 241 topics in the dataset
 filteredTopics = ['adventurewriting', 'allegory', 'antiromance', 'artcriticism', 'biography', 'bisexualfiction', 'blackcomedy', 'charade', 'childrensliterature', 'comedy', 'comicbook', 'cookbook', 'detective', 'diary', 'documentary', 'drama', 'dystopia', 'encyclopaedia', 'epistolary', 'essay', 'fairytale', 'fantasy', 'feminist', 'ghoststory', 'gothic', 'guidebook', 'heroic', 'historical', 'literarycriticism', 'lyric', 'melodrama', 'mystery', 'myth', 'philosophy', 'poetry', 'politicalwriting', 'popular', 'propaganda', 'prophecy', 'realist', 'religious', 'romance', 'satire', 'sciencefiction', 'scientificwriting', 'sentimental', 'shortstory', 'socialscience', 'song', 'sonnet', 'textbook', 'thriller', 'tragedy', 'travelwriting', 'treatise', 'utopia', 'youngadultwriting']
