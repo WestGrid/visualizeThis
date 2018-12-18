@@ -1,4 +1,4 @@
-# Code fragments from WestGrid's 2018 Visualize This! submission by Usman Alim and Roberta Cabral Ramos
+# Edited version of WestGrid's 2018 Visualize This! submission by Usman Alim and Roberta Cabral Ramos
 # Mota (Dept. of Computer Science, University of Calgary).
 
 import MDAnalysis as mda
