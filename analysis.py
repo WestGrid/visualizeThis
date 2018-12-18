@@ -7,7 +7,7 @@ from MDAnalysis.analysis.density import density_from_Universe
 from MDAnalysis.analysis.distances import distance_array
 import tvtk.api as tvtk
 
-base = '/Users/razoumov/Documents/visualizeThis/2018/data/scientific/'
+base = '/path/to/data/scientific/'
 u = mda.Universe(base+'sim.part0001_protein_lipid_popc.gro', [base+'5us_traj_popc_protein_lipid_popc.xtc',base+'15us_traj_protein_lipid_popc.xtc'])
 
 # define the contact condition in ångströms

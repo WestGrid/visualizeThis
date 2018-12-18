@@ -14,9 +14,10 @@ submissions. After thoughtful deliberation the jury has picked three winners.
 ### First place
 
 The first place was taken by Philippe Nazair, a Data Visualization Developer at Université du Québec à
-Rimouski. Philippe's visualization is implemented as a static website with two layers: a graph viewer
-using the <a href="https://github.com/vasturiano/3d-force-graph" target="_blank">3d-force-graph web
-component</a>, and a map viewer implemented with <a href="https://leafletjs.com"
+Rimouski and part of <a href="https://meridian.cs.dal.ca" target="_blank">the MERIDIAN
+consortium</a>. Philippe's visualization is implemented as a static website with two layers: a graph
+viewer using the <a href="https://github.com/vasturiano/3d-force-graph" target="_blank">3d-force-graph
+web component</a>, and a map viewer implemented with <a href="https://leafletjs.com"
 target="_blank">Leaflet</a> to display markers on the map and written biographies from <a
 href="http://orlando.cambridge.org" target="_blank">Cambridge's Orlando</a> author's page found in the
 dataset. Below you can see a screen-capture video showing different interactions on this site. All JSON
