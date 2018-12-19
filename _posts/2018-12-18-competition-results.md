@@ -25,7 +25,7 @@ files for the visualization were created with a Python backend. We especially ap
 for radical and liberal ideologies and other groups, as well as the ability to build more complex graphs
 by selecting a predicate and setting it to a certain value, e.g. `hasActiveInvolvementIn = socialism`, or
 multiple values; each graph is limited to one predicate. Individual graph nodes can be displayed as
-either text or draggable spheres
+either text or draggable spheres.
 
 <div class="flex-video">
 	<iframe width="640" height="350" src="https://player.vimeo.com/video/306261749" frameborder="0"
